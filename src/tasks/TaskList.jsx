@@ -16,7 +16,7 @@ export default function TaskList({ tasks }) {
                 </thead>
                 <tbody>
                     {
-                        tasks.map((task => (
+                        tasks.map(task => (
                             <tr key={task.id} className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-2">
                                 <td><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-star" width="24"
                                     height="24" viewBox="0 0 24 24" strokeWidth="2" stroke={task.isFav === true ? "yellow" : "white"} fill={task.isFav === true ? "yellow" : ""}
@@ -44,7 +44,7 @@ export default function TaskList({ tasks }) {
                                         )}
                                     </ul>
                                 </td>
-                                <td className="text-center">{task.priority[0]}</td>
+                                <td className="text-center">{task.priority}</td>
                                 <td>
                                     <div className="flex items-center justify-center space-x-3">
                                         <button className="text-red-500">Delete</button>
@@ -52,7 +52,7 @@ export default function TaskList({ tasks }) {
                                     </div>
                                 </td>
                             </tr>
-                        )))
+                        ))
                     }
                 </tbody>
             </table>

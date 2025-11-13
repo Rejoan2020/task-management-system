@@ -1,7 +1,7 @@
 import Footer from "./Footer"
 import Header from "./Header"
 import Hero from "./Hero"
-import Search from "./Search"
+import Search from "./tasks/Search"
 import Tasktable from "./tasks/Tasktable"
 function App() {
 
@@ -12,7 +12,6 @@ function App() {
         <Hero className="text-red-500"/>
         <section className="mb-20" id="tasks">
           <div className="container">
-            <Search />
             <Tasktable />
           </div>
         </section>
